@@ -1,0 +1,10 @@
+#idea
+*.iml
+.idea
+#gradle
+.gradle
+gradle*
+#binaries
+build
+#properies
+additional.yml

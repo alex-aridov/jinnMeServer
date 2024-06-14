@@ -1,0 +1,6 @@
+spring:
+  application.name: JinnMeServer
+  jpa:
+    hibernate.ddl-auto: validate
+  liquibase:
+    change-log: classpath:/db/changelog/changesets.postgres.sql
