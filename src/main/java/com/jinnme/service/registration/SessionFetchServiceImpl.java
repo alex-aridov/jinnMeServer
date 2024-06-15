@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.UUID;
+
 @Component
 @RequiredArgsConstructor
 public class SessionFetchServiceImpl implements SessionFetchService {
@@ -25,5 +27,11 @@ public class SessionFetchServiceImpl implements SessionFetchService {
                     session.setChat(chat);
                     return sessionRepository.save(session);
                 });
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.MANDATORY)
+    public Session fetch(UUID sessionId) {
+        return sessionRepository.getReferenceById(sessionId);
     }
 }

@@ -22,9 +22,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class MessageSaveServiceImplTest {
+class MessageServiceImplTest {
     @InjectMocks
-    private MessageSaveServiceImpl messageRegistrationService;
+    private MessageServiceImpl messageRegistrationService;
     @Mock
     private MessageRepository messageRepository;
     @Mock

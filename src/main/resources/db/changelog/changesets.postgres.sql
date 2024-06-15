@@ -1,3 +1,5 @@
+--liquibase formatted sql
+
 --changeset aleks.aridov:init
 create table t_user
 (
@@ -64,3 +66,7 @@ create index message_session_id_index
 
 create index message_from_id_index
     on message (from_id);
+
+--changeset aleks.aridov:message_role
+alter table message
+    add role varchar(20) not null;
