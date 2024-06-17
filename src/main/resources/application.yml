@@ -6,3 +6,7 @@ spring:
     change-log: classpath:/db/changelog/changesets.postgres.sql
   jackson:
     default-property-inclusion: non_null
+logging:
+  file:
+    path: /var/log/jinnme-server
+    name: jinnme.log
